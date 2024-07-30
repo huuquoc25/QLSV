@@ -1,8 +1,8 @@
 package Bai1;
 
-public class Student implements Comparable<Student>{
+public class Student implements ActionStudent{
 
-    private String maSv;
+    private String idSv;
     private String name;
     private String address;
     private int age;
@@ -10,23 +10,23 @@ public class Student implements Comparable<Student>{
     public Student() {
     }
 
-    public Student(String maSv, String name, String address, int age) {
-        this.maSv = maSv;
+    public Student(String idSv, String name, String address, int age) {
+        this.idSv = idSv;
         this.name = name;
         this.address = address;
         this.age = age;
     }
 
-    public Student(String maSv) {
-        this.maSv=maSv;
+    public Student(String idSv) {
+        this.idSv=idSv;
     }
 
-    public String getMaSv() {
-        return maSv;
+    public String getIdSv() {
+        return idSv;
     }
 
-    public void setMaSv(String maSv) {
-        this.maSv = maSv;
+    public void setIdSv(String idSv) {
+        this.idSv = idSv;
     }
 
     public String getName() {
@@ -56,7 +56,7 @@ public class Student implements Comparable<Student>{
     @Override
     public String toString() {
         return "Student{" +
-                "maSv='" + maSv + '\'' +
+                "idSv='" + idSv + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", age=" + age +
@@ -64,8 +64,7 @@ public class Student implements Comparable<Student>{
     }
 
     @Override
-    public int compareTo(Student o) {
-        return this.maSv.compareTo(o.maSv);
+    public void paySchoolFees() {
+        System.out.println("Học sinh đã đóng học phí.");
     }
-
 }
